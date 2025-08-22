@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HUG Ibadan × Terraform × Netlify</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>🚀 Terraform → Netlify → HCP Remote State</h1>
+    <p>This site was provisioned using <strong>Terraform</strong>, deployed via <strong>Netlify CLI</strong>, with state stored in <strong>HCP Terraform</strong>.</p>
+    <p id="welcome">A Mac kingsley's Infra.</p>
+    <section class="card">
+      <h2>Why it's cool</h2>
+      <ul>
+        <li>Remote state with HCP Terraform</li>
+        <li>Unique site name per run</li>
+        <li>Secrets kept outside the repo</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Made for the <strong>HUG Ibadan</strong> challenge ♥</p>
+    </footer>
+  </main>
+  <script>
+    // fun: randomize the emoji on each load
+    const emojis = ["🚀","🎉","✨","🧩","🛠️"];
+    document.title = emojis[Math.floor(Math.random()*emojis.length)] + " Terraform → Netlify";
+  </script>
+</body>
+</html>
