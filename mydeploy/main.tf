@@ -7,7 +7,7 @@ locals {
 }
 
 
-# Step 1: Create the site
+
 resource "null_resource" "netlify_site_create" {
   triggers = {
     name = local.site_name
@@ -27,7 +27,7 @@ EOT
   }
 }
 
-# Step 2: Deploy to the site
+
 resource "null_resource" "netlify_deploy" {
   depends_on = [null_resource.netlify_site_create]
 
@@ -50,14 +50,14 @@ EOT
 }
 
 
-# --- Add this data source below your site creation ---
+
 data "netlify_site" "this" {
   depends_on = [null_resource.netlify_site_create]
   name       = local.site_name
-  team_slug  = "kingsleyudoma2018"  # keep your team slug
+  team_slug  = "kingsleyudoma2018"  
 }
 
-# --- Update your environment variable resource to use real IDs ---
+
 resource "netlify_environment_variable" "message" {
   site_id = "f682ae93-7d1d-40c9-a19c-7e2728d8349a"
   team_id = "kingsleyudoma2018"

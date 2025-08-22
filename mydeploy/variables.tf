@@ -4,7 +4,7 @@ variable "site_prefix" {
   default     = "hug-ibadan-demo"
 }
 
-# Optional if you prefer to pass token via variable instead of env var.
+
 variable "netlify_token" {
   description = "Netlify Personal Access Token (prefer env var NETLIFY_TOKEN)"
   type        = string
